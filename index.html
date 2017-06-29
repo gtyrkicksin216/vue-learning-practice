@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Ryan Wood">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title></title>
+        
+        <!-- ======== ADD BOOTSTRAP HERE ======= -->
+        
+        
+        
+        <!-- ======== FAVICON HERE ========= -->
+        <link rel="icon" type="image/png" href="#">
+        
+        <!-- ======== CUSTOM STYLES ======= -->
+        
+        
+        <!-- ======== HTML5 SHIM FOR STUPID BROWSERS ======== -->
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+    </head>
+        <body>
+        
+        <div id="app">
+            {{ message }}
+        </div>
+        <br>
+        <div id="app-2">
+            <span v-bind:title="message">
+                Hover your mouse over me for a few seconds to see my dynamically bound title!
+            </span>
+        </div>
+        <br>
+        <div id="app-3">
+            <p v-if="seen">Now you see me!</p>
+        </div>
+        <br>
+        <div id="app-4">
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
+        </div>
+        <br>
+        <div id="app-5">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">Reverse</button>
+        </div>
+        <br>
+        <div id="app-6">
+            <p>{{ message }}</p>
+            <input v-model="message">
+        </div>
+        <br>
+        <div id="app-7">
+            <ol>
+                <todo-item
+                   v-for='item in groceryList'
+                   v-bind:todo='item'
+                   v-bind:key='item.id'>
+                </todo-item>
+            </ol>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        
+        
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        
+        
+        <script src="https://unpkg.com/vue" type="text/javascript"></script>
+        <script src="script.js" type="text/javascript"></script>
+        </body>
+</html>
+        
